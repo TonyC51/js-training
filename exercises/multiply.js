@@ -9,6 +9,26 @@
  */
 
 // Your code :
+function multiply (number1, number2) {
+	var result = 0;
+	if (number1 == 0 || number2 == 0) {
+		return 0;	
+	}
+
+	for (var i = 0; i < Math.abs(number2); i++) {
+			result = result + Math.abs(number1);
+		}
+
+	if ((number1 > 0 && number2 > 0) || (number1 < 0 && number2 < 0)) {
+		
+		return result;
+	}
+
+	else {
+		return -result;
+	}
+}
+
 
 //* Begin of tests
 const assert = require('assert')
